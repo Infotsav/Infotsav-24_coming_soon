@@ -1,14 +1,12 @@
-import React from 'react'
-import './App.css'
-import Home from './pages/Home'
-function App() {
-
-
+import gsap from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
+import { useLayoutEffect, useRef } from "react";
+import EventsCardsContainer from "./components/compounds/EventsCardsContainer";
+import "./App.css";
+export default function App() {
   return (
-    <>
-      < Home />
-    </>
-  )
+    <div className="App">
+      <EventsCardsContainer />
+    </div>
+  );
 }
-
-export default App
