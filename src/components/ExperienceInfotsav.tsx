@@ -4,14 +4,14 @@ const ExperienceInfotsav = ({}: ExperienceInfotsav) => {
   return (
     <div className="w-full relative flex flex-col sm:grid sm:grid-cols-[1fr,2fr] gap-4">
       <div className="flex flex-col justify-center items-center gap-4 text-center">
-        <h2 className="text-5xl font-bold text-[#c6c4c9] mr-auto">
+        <h2 className="text-xl sm:text-5xl font-bold text-[#c6c4c9] mr-auto w-full sm:w-auto">
           Experience{" "}
-          <p className="uppercase text-6xl font-extrabold text-[rgb(194,255,63)]">
+          <p className="uppercase text-2xl sm:text-6xl font-extrabold text-[rgb(194,255,63)]">
             Infotsav
           </p>
         </h2>
       </div>
-      <div className="text-[#c6c4c9] px-4 text-lg h-full flex items-center">
+      <div className="text-[#c6c4c9] sm:px-4 sm:text-lg h-full flex items-center text-center sm:text-left">
         <p>
           Infotsav provides a platform for one and all to witness one of the
           biggest techno-managerial fests of Central India with pure delight and
