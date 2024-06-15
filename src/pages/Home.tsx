@@ -2,6 +2,7 @@ import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import { useLayoutEffect, useRef } from "react";
 import "../App.css";
+        import Intro from "../components/Intro";
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Home() {
@@ -29,6 +30,10 @@ export default function Home() {
   });
 
   return (
+    <>
+      <main className="flex flex-col">
+      <Intro />
+    </main>
     <div className="App" ref={component}>
       <div className="firstContainer">
         <h1>Testing horizontal scrolling w/ three sections</h1>
@@ -49,5 +54,6 @@ export default function Home() {
       </div>
       <div className="lastContainer">Last Container</div>
     </div>
+      </>
   );
 }
