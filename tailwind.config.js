@@ -11,7 +11,22 @@ const svgToDataUri = require("mini-svg-data-uri");
 module.exports = {
   content: ["./src/**/*.{html,js,ts,jsx,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        customBackground: '#151518',
+        customFont1: '#c3fe3f',
+        customFont2: '#aaabab',
+      },
+      fontFamily: {
+        sora: ['Sora', 'sans-serif'],
+      },
+      height: {
+        'custom': '500px',
+      },
+      fontSize: {
+        'vw-13': '12vw',
+      },
+    },
   },
   plugins: [
     addVariablesForColors,

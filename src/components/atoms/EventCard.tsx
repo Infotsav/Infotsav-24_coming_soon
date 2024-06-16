@@ -1,7 +1,7 @@
 function EventCard() {
-    return ( <div>
+    return (<div>
         This is a card
-    </div> );
+    </div>);
 }
 
 export default EventCard;
