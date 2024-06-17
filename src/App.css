@@ -21,6 +21,9 @@ header {
   padding-top: 30px;
 }
 
+body{
+  background-color: black;
+}
 .App {
   overflow-x: hidden;
 }
@@ -31,23 +34,30 @@ header {
   margin: 0 auto;
 }
 
+.page-wrapper{
+}
 .section {
-  background: rgb(0, 0, 0);
+  /* background: rgb(0, 0, 0); */
   overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
   padding-left: 10vw;
+  position: relative;
+  top:-10vh;
   height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 
 }
 
 .items {
   display: flex;
-  gap: 20vw;
+ gap: 15vw;
   height: 100%;
-  width: 600vw;
-  justify-content: space-around;
+  width: 620vw;
+  justify-content: space-evenly;
   align-items: center;
   flex-wrap: nowrap;
   list-style: none;
@@ -55,54 +65,32 @@ header {
 }
 
 .item {
-  min-width: 70vw;
+  min-width: 50vw;
   height: 60vh;
   background-repeat: no-repeat;
   background-size: 120%;
   background-position: center center;
   /* Ensure the background is centered */
-  margin-right: 20px;
+  /* margin-right: 20vw; */
   border-radius: 50px;
-  background-image: linear-gradient(rgb(141, 255, 1), rgb(162, 255, 32));
   line-height: 190px;
   text-align: center;
   position: relative;
   z-index: 1;
   font-size: 24px;
-  color: black;
-  transition: 0.25s all linear;
-
+  transition: 0.25s all ease;
 }
 
-.item::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -3;
-  width: 100%;
-  border-radius: 50px;
-  height: 100%;
-  /* background-image: linear-gradient(to bottom,rgba(255, 255, 255, 0),rgba(255, 255, 255, 0),black); */
-  background-color: rgb(152, 255, 50);
-  transition: all 0.25s linear;
-  /* Ensure the transition applies to the background color */
-}
 
 .ct {
   z-index: 5;
   position: relative;
   top: 0;
   left: 0;
+  backdrop-filter: grayscale(100%);
   width: 100%;
   height: 100%;
-  animation: 4s infinite alternate slide;
-  background-size: 150%;
-  background-position: center;
-  animation: slide 4s infinite alternate;
   transition: all 0.25s linear;
-
-  background-image: url('./assets//images/event4.jpg');
   border-radius: 50px;
 
 }
@@ -124,40 +112,62 @@ header {
 .ct:hover::after {
   opacity: 1;
 }
-
-.item:hover .ct {
-  top: 20px;
-  left: -30px;
-}
-
-.flair {
-  width: 150px;
-  height: 150px;
-  border-radius: 75px;
-  position: fixed;
-  z-index: 5;
-  background-color: rgba(255, 255, 255, 0);
-  backdrop-filter: blur(7px);
-  border: 5px solid rgb(162, 255, 32);
-  top: -75px;
-  left: -75px;
-  pointer-events: none;
-}
-
-@keyframes slide {
-  0% {
-    background-position: 40% center;
-  }
-
-  50% {
-    background-position: 60% center;
-  }
-
-  100% {
-    background-position: 40% center;
-  }
+.ct:hover{
+  backdrop-filter: grayscale(0%);
 
 }
+
+
+
+.spacer {
+  height: 100vh;
+}
+
+.background-text {
+  margin-top: 50px;
+  background-color: black;
+  transition: 1s ease-in-out all;
+  text-align: center;
+  margin-bottom: 10vh;
+  list-style: none;
+}
+
+.background-text__item {
+  font-family: "Monument Extended";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 90px;
+  line-height: 120px;
+  text-transform: uppercase;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  background: transparent;
+  z-index: -1111;
+}
+.bti2{
+  color: rgb(194, 255, 63);
+}
+
+.text-cont {
+  position: relative;
+  top: 60%;
+  z-index: 10;
+  font-size: 50px; /* Adjust as needed */
+  color: rgb(194, 255, 63);
+  font-family: "Monument Extended";
+}
+
+.text-cont::before {
+  content: ''; /* Same text as in the div */
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: white;
+  z-index: -1;
+  -webkit-text-stroke: 1px white; /* Adjust stroke width and color as needed */
+  text-stroke: 1px white; /* For other browsers */
+}
+
 
 .spacer {
   height: 300px;
