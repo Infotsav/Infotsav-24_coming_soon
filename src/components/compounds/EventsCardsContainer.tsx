@@ -25,7 +25,7 @@ export default function Scene() {
         item.style.left = `0px`;
         item.style.transform = `scale(1)`;
     }
-    
+
     console.log(infotsavEvents)
     useLayoutEffect(() => {
         let items = gsap.utils.toArray(".items")[0] as HTMLElement;
@@ -51,27 +51,27 @@ export default function Scene() {
             }
         });
 
-            // let proxy = { skew: 0 },
-            //     skewSetter = gsap.quickSetter(".item", "skewX", "deg"),
-            //     clamp = gsap.utils.clamp(-20, 20);
+        // let proxy = { skew: 0 },
+        //     skewSetter = gsap.quickSetter(".item", "skewX", "deg"),
+        //     clamp = gsap.utils.clamp(-20, 20);
 
-            // ScrollTrigger.create({
-            //     onUpdate: (self) => {
-            //         let skew = clamp(self.getVelocity() / -300);
-            //         if (Math.abs(skew) > Math.abs(proxy.skew)) {
-            //             proxy.skew = skew;
-            //             gsap.to(proxy, {
-            //                 skew: 1,
-            //                 duration: 1.8,
-            //                 ease: "power3",
-            //                 overwrite: true,
-            //                 onUpdate: () => skewSetter(proxy.skew)
-            //             });
-            //         }
-            //     }
-            // });
+        // ScrollTrigger.create({
+        //     onUpdate: (self) => {
+        //         let skew = clamp(self.getVelocity() / -300);
+        //         if (Math.abs(skew) > Math.abs(proxy.skew)) {
+        //             proxy.skew = skew;
+        //             gsap.to(proxy, {
+        //                 skew: 1,
+        //                 duration: 1.8,
+        //                 ease: "power3",
+        //                 overwrite: true,
+        //                 onUpdate: () => skewSetter(proxy.skew)
+        //             });
+        //         }
+        //     }
+        // });
 
-            // gsap.set(".skewElem", { transformOrigin: "right center", force3D: true });
+        // gsap.set(".skewElem", { transformOrigin: "right center", force3D: true });
 
 
         gsap.registerPlugin(ScrollTrigger);
@@ -80,7 +80,7 @@ export default function Scene() {
 
         const backTextWrapper = document?.querySelectorAll(".background-text");
 
-        backTextWrapper.forEach((section:HTMLElement ) => {
+        backTextWrapper.forEach((section: HTMLElement) => {
 
             const textLines = section?.querySelectorAll(".background-text__item");
 
@@ -126,13 +126,13 @@ export default function Scene() {
                                 ))
                             } */}
                             {
-                                infotsavEvents.map((event,i)=>{
-                                    return(
-                                        <li className="item" onMouseMove={handleMouseMove} onMouseLeave={handleMouseLeave} key={i} style={{backgroundImage:`url(${event.image})`}}><div className="ct">
-                                             <div className="text-cont">{event.heading}</div>
-                                            </div></li>
+                                infotsavEvents.map((event, i) => {
+                                    return (
+                                        <li className="item" onMouseMove={handleMouseMove} onMouseLeave={handleMouseLeave} key={i} style={{ backgroundImage: `url(${event.image})` }}><div className="ct">
+                                            <div className="text-cont">{event.heading}</div>
+                                        </div></li>
                                     )
-                                
+
                                 })
                             }
                         </ul>
