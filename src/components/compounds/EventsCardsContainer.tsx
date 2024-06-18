@@ -1,13 +1,10 @@
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
-import { useLayoutEffect, useRef } from "react";
+import { useLayoutEffect } from "react";
 import infotsavEvents from "../../content/Events";
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Scene() {
-    const component = useRef<HTMLDivElement | null>(null);
-    const slider = useRef<HTMLDivElement | null>(null);
-
     function handleMouseMove(event: React.MouseEvent<HTMLLIElement, MouseEvent>) {
         let item = event.currentTarget as HTMLElement;
         let centerX = (item.getBoundingClientRect().left + (item as HTMLElement).offsetWidth) / 2;
@@ -51,41 +48,16 @@ export default function Scene() {
             }
         });
 
-        // let proxy = { skew: 0 },
-        //     skewSetter = gsap.quickSetter(".item", "skewX", "deg"),
-        //     clamp = gsap.utils.clamp(-20, 20);
-
-        // ScrollTrigger.create({
-        //     onUpdate: (self) => {
-        //         let skew = clamp(self.getVelocity() / -300);
-        //         if (Math.abs(skew) > Math.abs(proxy.skew)) {
-        //             proxy.skew = skew;
-        //             gsap.to(proxy, {
-        //                 skew: 1,
-        //                 duration: 1.8,
-        //                 ease: "power3",
-        //                 overwrite: true,
-        //                 onUpdate: () => skewSetter(proxy.skew)
-        //             });
-        //         }
-        //     }
-        // });
-
-        // gsap.set(".skewElem", { transformOrigin: "right center", force3D: true });
-
-
         gsap.registerPlugin(ScrollTrigger);
 
         document.body.style.overflow = "auto";
 
-        const backTextWrapper = document?.querySelectorAll(".background-text");
+        const backTextWrapper = document.querySelectorAll(".background-text") as NodeListOf<HTMLElement>;
 
         backTextWrapper.forEach((section: HTMLElement) => {
-
-            const textLines = section?.querySelectorAll(".background-text__item");
+            const textLines = section.querySelectorAll(".background-text__item") as NodeListOf<HTMLElement>;
 
             textLines.forEach(function (line, index) {
-
                 const [x, xEnd] = index % 2
                     ? [window.innerWidth, (line.scrollWidth - section.offsetWidth) * -1]
                     : [line.scrollWidth * -1, 0];
@@ -104,9 +76,7 @@ export default function Scene() {
                         }
                     }
                 );
-
-            })
-
+            });
         });
     }, []);
 
@@ -120,19 +90,15 @@ export default function Scene() {
                 <section className="section">
                     <div className="container">
                         <ul className="items scrollx-section" style={{ display: 'flex', width: '200%' }}>
-                            {/* {
-                                Array.from({ length: 7 }).map((_, i) => (
-                                    <li className="item" onMouseMove={handleMouseMove} onMouseLeave={handleMouseLeave}><div className="ct">1</div></li>
-                                ))
-                            } */}
                             {
                                 infotsavEvents.map((event, i) => {
                                     return (
-                                        <li className="item" onMouseMove={handleMouseMove} onMouseLeave={handleMouseLeave} key={i} style={{ backgroundImage: `url(${event.image})` }}><div className="ct">
-                                            <div className="text-cont">{event.heading}</div>
-                                        </div></li>
+                                        <li className="item" onMouseMove={handleMouseMove} onMouseLeave={handleMouseLeave} key={i} style={{ backgroundImage: `url(${event.image})` }}>
+                                            <div className="ct">
+                                                <div className="text-cont">{event.heading}</div>
+                                            </div>
+                                        </li>
                                     )
-
                                 })
                             }
                         </ul>
@@ -142,7 +108,6 @@ export default function Scene() {
                 <section className='next-sections'>
                     <div className="container">
                         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit...</p>
-
                     </div>
                 </section>
                 <div className="spacer">spacer</div>
