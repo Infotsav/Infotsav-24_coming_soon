@@ -24,7 +24,8 @@ module.exports = {
         'custom': '500px',
       },
       fontSize: {
-        'vw-13': '12vw',
+        'vw-5': '8vw',
+        'vw-13': '18vw',
       },
     },
   },

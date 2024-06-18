@@ -19,6 +19,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-infinite-logo-slider": "^1.0.13",
+    "react-scroll-motion": "^0.3.3",
     "simplex-noise": "^4.0.1",
     "tailwind": "^4.0.0",
     "tailwind-merge": "^2.3.0",
