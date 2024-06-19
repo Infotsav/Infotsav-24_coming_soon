@@ -104,13 +104,13 @@ export default function Scene() {
                         </ul>
                     </div>
                 </section>
-                <div className="spacer">spacer</div>
+                {/* <div className="spacer">spacer</div>
                 <section className='next-sections'>
                     <div className="container">
                         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit...</p>
                     </div>
                 </section>
-                <div className="spacer">spacer</div>
+                <div className="spacer">spacer</div> */}
             </div>
         </div>
     );
