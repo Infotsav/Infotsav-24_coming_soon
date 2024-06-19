@@ -1,4 +1,4 @@
-// import EventsCardsContainer from "./components/compounds/EventsCardsContainer";
+import EventsCardsContainer from "./components/compounds/EventsCardsContainer";
 import Intro from "./components/Intro";
 import HeroSection from "./components/HeroSection";
 import Sponsor from "./components/Sponsors";
@@ -22,7 +22,7 @@ export default function App() {
         <Sponsor />
       </div>
 
-      {/* <EventsCardsContainer /> */}
+      <EventsCardsContainer />
 
     </div>
   );

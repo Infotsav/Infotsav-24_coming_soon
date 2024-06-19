@@ -40,10 +40,10 @@ const Sponsor = () => {
         CodeChef,
         Dainik_Bhaskar,
         Digital_Ocean,
-        FestPav,
         FabHotels,
-        Hack_Society,
+        FestPav,
         HackerEarth,
+        Hack_Society,
         InkMonk,
         KnowAFest,
         Swiggy,
@@ -54,7 +54,7 @@ const Sponsor = () => {
 
     const result = sponsors.map((sponsor, index) => (
         <Slider.Slide
-            className={`mx-4 aspect-square ${index % 3 === 1 ? "border-4" : "border-2"} ${index % 3 === 0 ? "bg-[#c2ff3f]" : "bg-transparent"} rounded-full aspect-square w-[300px] flex justify-center items-center p-3 overflow-clip`}
+            className={`mx-4 aspect-square ${index % 3 === 1 ? "border-4" : "border-2"} ${index % 2 === 0 ? "bg-[#c2ff3f]" : "bg-transparent"} bg-[#c2ff3f] rounded-full aspect-square w-[300px] flex justify-center items-center p-3 overflow-clip`}
             key={index}
             {...(sponsor as any)}
         >
@@ -64,14 +64,21 @@ const Sponsor = () => {
 
     return (
         <section className="sponsorsContainer overflow-x-hidden lg:w-screen xl:w-full">
-            <div className="w-full pt-60 pl-24 textContainer xl:pt-72">
+            <div className="w-full pt-60 pl-24 textContainer xl:pt-72 x-10">
                 <p className="flex items-center flex-row preText">
                     <img className="h-5 arrowSVG" src={arrow} alt="" />
-                    <span className="lg:text-xl xl:text-[32px] heartfelt">A Heartfelt Tribute to the</span>
+                    <span className="lg:text-xl xl:text-[32px] heartfelt">
+                        A Heartfelt Tribute to the
+                    </span>
                 </p>
-                <h3 className="xl:text-[230px] sponsorWindow text-[#c2ff3f] md:text-[80px] lg:text-[120px] ml-10 leading-none -mb-4 sponsorsText">SPONSORS</h3>
-                <span className="block sponsorWindow text-transparent postText2 text-6xl lg:ml-96 xl:text-[85px] fromText" id="FROM"></span>
-                <span className="block sponsorWindow fromText text-[#aaa] text-6xl ml-52 xl:text-[85px]">From Past</span>
+                <h3 className="xl:text-[230px] sponsorWindow text-[#c2ff3f] md:text-[70px] lg:text-[120px] ml-10 leading-none -mb-4 sponsorsText">
+                    SPONSORS
+                </h3>
+                <span className="block sponsorWindow text-transparent postText2 text-6xl lg:ml-96 xl:text-[85px] fromText" id="FROM">
+                </span>
+                <span className="block sponsorWindow fromText text-[#aaa] text-6xl ml-52 xl:text-[85px]">
+                    From Past
+                </span>
             </div>
             <div className="w-full overflow-x-hidden h-screen scrollContainer">
                 <div className="-rotate-3 pt-7 mt-9 w-[200%] mx-auto -ml-40 sponsorsScrollContainer">

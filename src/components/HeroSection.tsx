@@ -47,7 +47,7 @@ export default function HeroSection() {
                                     }
                                     className="h-screen w-full border rounded-md"
                                 >
-                                    <p className="text-vw-5 text-customFont1 font-black inter-var text-center">
+                                    <p className="text-vw-5 leading-10 text-customFont1 font-black inter-var text-center">
                                         Coming Soon
                                     </p>
                                 </MaskContainer>
