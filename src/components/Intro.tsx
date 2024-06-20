@@ -1,4 +1,5 @@
 import About from "./About";
+import Countdown from "./Countdown";
 import ExperienceInfotsav from "./ExperienceInfotsav";
 
 type IntroProps = {};
@@ -9,6 +10,7 @@ const Intro = ({}: IntroProps) => {
       <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
       <About />
       <ExperienceInfotsav />
+      <Countdown />
     </section>
   );
 };
