@@ -4,6 +4,7 @@ import HeroSection from "./components/HeroSection";
 import Sponsor from "./components/Sponsors";
 
 import "./App.css";
+import Footer from "./components/Footer";
 
 export default function App() {
 
@@ -22,7 +23,11 @@ export default function App() {
         <Sponsor />
       </div>
 
-      <EventsCardsContainer />
+      {/* <EventsCardsContainer /> */}
+
+      {/* <div className="footer">
+        <Footer />
+      </div> */}
 
     </div>
   );
