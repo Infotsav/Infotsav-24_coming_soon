@@ -80,7 +80,7 @@ const Sponsor = () => {
                     From Past
                 </span>
             </div>
-            <div className="w-full overflow-x-hidden h-screen scrollContainer">
+            <div className="w-full overflow-x-hidden h-[500px] scrollContainer">
                 <div className="-rotate-3 pt-7 mt-9 w-[200%] mx-auto -ml-40 sponsorsScrollContainer">
                     <Slider className="slider" duration={18} pauseOnHover={true} reverse={false} unit="px">
                         {result}
