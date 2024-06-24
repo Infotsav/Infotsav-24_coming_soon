@@ -1,10 +1,10 @@
-import EventsCardsContainer from "./components/compounds/EventsCardsContainer";
+// import EventsCardsContainer from "./components/compounds/EventsCardsContainer";
 import Intro from "./components/Intro";
 import HeroSection from "./components/HeroSection";
 import Sponsor from "./components/Sponsors";
 
 import "./App.css";
-import Footer from "./components/Footer";
+// import Footer from "./components/Footer";
 
 export default function App() {
 
