@@ -2,9 +2,9 @@
 import Intro from "./components/Intro";
 import HeroSection from "./components/HeroSection";
 import Sponsor from "./components/Sponsors";
+import Footer from "./components/Footer";
 
 import "./App.css";
-// import Footer from "./components/Footer";
 
 export default function App() {
 
@@ -25,9 +25,9 @@ export default function App() {
 
       {/* <EventsCardsContainer /> */}
 
-      {/* <div className="footer">
+      <div className="footer">
         <Footer />
-      </div> */}
+      </div>
 
     </div>
   );
